@@ -1,0 +1,104 @@
+.application-main{
+    background-color: black;
+    color: white;
+    font-family: 'GmarketSans';
+    font-weight: 700;
+
+    height: 80vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.application-title{
+    font-size: 50px;
+    margin-left: 5vw;
+
+    display: flex;
+    width: 900px;
+}
+
+.application-on{
+    font-size: 30px;
+    margin-left: 10vw;
+    margin-top: 7vh;
+    width: 300px;
+    cursor: pointer;
+
+    width: 300px;
+}
+
+.application-off{
+    font-size: 30px;
+    margin-left: 10vw;
+    margin-top: 7vh;
+    width: 300px;
+    cursor: pointer;
+
+    width: 400px;
+}
+
+.application-on:hover{
+    background: linear-gradient(to right, rgb(255, 151, 238), rgb(75, 189, 255));
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+.application-off:hover{
+    background: linear-gradient(to right, rgb(255, 151, 238), rgb(75, 189, 255));
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+.application-signIn{
+    font-size: 50px;
+    margin-left: 5vw;
+    margin-top: 20vh;
+
+    display: flex;
+    width: 1300px;
+}
+
+.application-to-signIn{
+    font-size: 30px;
+    margin-left: 10vw;
+    margin-top: 7vh;
+    cursor: pointer;
+
+    width: 400px;
+}
+
+.application-to-signIn > a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.application-to-signIn:hover{
+    background: linear-gradient(to right, rgb(255, 151, 238), rgb(75, 189, 255));
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+
+@media screen and (max-width:500px) {
+
+    .application-main{
+        height: 70vh;
+    }
+
+    .application-title{
+        font-size: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .information-highlight-2 {
+        width: 220px;
+    }
+
+    .application-on {
+        font-size: 20px;
+    }
+}
