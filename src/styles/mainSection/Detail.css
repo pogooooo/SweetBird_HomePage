@@ -38,6 +38,7 @@
     margin-right: 2vw;
 }
 
+/*빈 화살표 버튼*/
 .empty-arrow-button{
     border-radius: 50%;
     width: 50px;
@@ -51,20 +52,47 @@
     border: 2px solid white;
 }
 
-.detail-projects-scroll-button.active {
-    background: linear-gradient(to right, rgb(255, 151, 238), rgb(75, 189, 255));
+/*버튼*/
+#detail-projects-scroll-button{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
 
-    background-color: white;
-    color: black;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.detail-projects-scroll-button:hover{
-    background: linear-gradient(to right, rgb(255, 151, 238), rgb(75, 189, 255));
-
-    background-color: white;
-    color: black;
+/*활성화된 버튼*/
+#detail-projects-scroll-button.active {
+    border: 2px solid transparent;
+    background-image:
+            linear-gradient(black, black),
+            linear-gradient(to right, rgb(255, 151, 238), rgb(75, 189, 255));
+    background-origin: border-box;
+    background-clip:content-box, border-box;
 }
 
+/*호버 버튼*/
+#detail-projects-scroll-button:hover{
+    border: 2px solid transparent;
+    color: transparent;
+    background-image:
+            linear-gradient(to right, rgb(255, 151, 238), rgb(75, 189, 255)),
+            linear-gradient(black, black),
+            linear-gradient(to right, rgb(255, 151, 238), rgb(75, 189, 255));
+    background-origin: border-box;
+    background-clip:text, content-box, border-box;
+}
+
+/*화살표 버튼*/
 .arrow-button{
     font-family: 'GmarketSans';
     font-weight: 700;
@@ -79,30 +107,23 @@
     background-color: black;
     color: white;
     border: 2px solid white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
 }
 
+/*화살표 버튼 호버*/
 .arrow-button:hover{
-    background: linear-gradient(to right, rgb(255, 151, 238), rgb(75, 189, 255));
-
-    background-color: white;
-    color: black;
-}
-
-.detail-projects-scroll-button{
-    font-family: 'GmarketSans';
-    font-weight: 700;
-
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-
-    background-color: black;
-    color: white;
-    border: 2px solid white;
+    border: 2px solid transparent;
+    color: transparent;
+    background-image:
+            linear-gradient(to right, rgb(255, 151, 238), rgb(75, 189, 255)),
+            linear-gradient(black, black),
+            linear-gradient(to right, rgb(255, 151, 238), rgb(75, 189, 255));
+    background-origin: border-box;
+    background-clip:text, content-box, border-box;
 }
 
 /* 작품 이 나타나는 화면 */
@@ -111,5 +132,46 @@
     height: 65vh;
     border: 2px solid white;
 }
+
+@media screen and (max-width:500px) {
+    .detail-projects{
+        height: 100vh;
+    }
+
+    .detail-projects-title{
+        font-size: 20px;
+    }
+
+    .detail-projects-view{
+        flex-direction: column;
+    }
+
+    .detail-projects-scroll{
+        flex-direction: row;
+        margin-right: 0;
+    }
+
+    .detail-projects-scroll > div {
+        width: 30px;
+        height: 30px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    #detail-projects-scroll-button{
+        width: 30px;
+        height: 30px;
+        margin-left: 5px;
+        margin-right: 5px;
+
+        font-size: 13px;
+    }
+
+    .detail-projects-iframe{
+        width: 300px;
+        height: 200px;
+    }
+}
+
 
 

@@ -17,8 +17,7 @@ const Information = () => {
 
                 <div className="introduce-ment">
                     <div className="introduce-QA">A.</div>
-                    <div className="information-highlight-1">　SWEET BIRD</div>
-                    <div className="information-answer">는 호서대학교 컴퓨터공학부 학생들이 모여
+                    <div className="information-answer">　호서대학교 컴퓨터공학부 학생들이 모여
                     2023년에 시작된 웹 개발 모임입니다.</div>
                 </div>
             </div>

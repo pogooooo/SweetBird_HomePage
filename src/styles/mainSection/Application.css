@@ -85,20 +85,21 @@
 @media screen and (max-width:500px) {
 
     .application-main{
-        height: 70vh;
+        height: 40vh;
     }
 
     .application-title{
-        font-size: 30px;
+        font-size: 20px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        width: 400px;
     }
 
     .information-highlight-2 {
-        width: 220px;
+        width: 150px;
     }
 
     .application-on {
-        font-size: 20px;
+        font-size: 18px;
     }
 }

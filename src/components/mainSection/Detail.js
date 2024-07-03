@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 
 import '../../styles/mainSection/Detail.css'
 
@@ -7,6 +7,28 @@ const Detail = () => {
     const [iframeSrc, setIframeSrc] = useState('http://localhost:3000/');
     const [startIndex, setStartIndex] = useState(0);
     const [activeButton, setActiveButton] = useState(null);
+    const [buttonText1, setButtonText1] = useState('↑');
+    const [buttonText2, setButtonText2] = useState('↓');
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 500) {
+                setButtonText1('←');
+                setButtonText2('→');
+            } else {
+                setButtonText2('↑');
+                setButtonText2('↓');
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        // 초기 크기 설정
+        handleResize();
+
+        // Cleanup
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     const buttons = [
         'http://localhost:3000/',
@@ -14,8 +36,7 @@ const Detail = () => {
         'https://www.naver.com/',
         'https://www.naver.com/',
         'https://www.naver.com/',
-        'https://www.naver.com/',
-        'https://www.naver.com/',
+        'https://www.naver.com/'
     ];
     
     const handleButtonClick = (newSrc, index) => {
@@ -37,39 +58,40 @@ const Detail = () => {
             <div className='detail-projects-title'>작품 소개</div>
             <div className='detail-projects-view'>
                 <div className='detail-projects-scroll'>
-                
-                    {startIndex === 0 && (
-                        <button className='empty-arrow-button'>
 
-                        </button>
+                    {startIndex === 0 && (
+                        <div className='empty-arrow-button'>
+
+                        </div>
                     )}
 
                     {startIndex > 0 && (
-                        <button onClick={() => handleArrowClick('up')} className='arrow-button'>
-                            ↑
-                        </button>
+                        <div onClick={() => handleArrowClick('up')} className='arrow-button'>
+                            {buttonText1}
+                        </div>
                     )}
 
                     {buttons.slice(startIndex, startIndex + 5).map((button, index) => (
-                        <button
+                        <div
                             key={index}
+                            id={'detail-projects-scroll-button'}
                             className={`detail-projects-scroll-button ${activeButton === index + startIndex ? 'active' : ''}`}
                             onClick={() => handleButtonClick(button, index + startIndex)}
                         >
                             {index + startIndex + 1}
-                        </button>
+                        </div>
                     ))}
 
-                    {startIndex === buttons.length - 5 && (
-                        <button className='empty-arrow-button'>
+                    {startIndex >= buttons.length - 5 && (
+                        <div className='empty-arrow-button'>
 
-                        </button>
+                        </div>
                     )}
 
                     {startIndex < buttons.length - 5 && (
-                        <button onClick={() => handleArrowClick('down')} className='arrow-button'>
-                            ↓
-                        </button>
+                        <div onClick={() => handleArrowClick('down')} className='arrow-button'>
+                            {buttonText2}
+                        </div>
                     )}
 
                 </div>

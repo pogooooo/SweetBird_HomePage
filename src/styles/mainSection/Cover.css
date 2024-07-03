@@ -44,7 +44,7 @@
     margin-bottom: 10vh;
     margin-left: 5vw;
     margin-top: 2vh;
-    width: 200px;
+    width: 60px;
 
     background: linear-gradient(to right, rgb(255, 151, 238), rgb(75, 189, 255));
     color: transparent;
@@ -62,13 +62,17 @@
         height: 50vh;
     }
     .club_title{
-        font-size: 30px;
-        width: 220px;
+        font-size: 20px;
+        width: 170px;
     }
     
     .short_description_of_club{
         display: inline;
-        font-size: 20px;
+        font-size: 13px;
         width: 240px;
+    }
+
+    .using_language{
+        font-size: 13px;
     }
 }

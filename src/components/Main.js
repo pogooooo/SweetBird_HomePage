@@ -12,7 +12,7 @@ const Main = () => {
         <div className="main">
             <Cover></Cover>
             <Information></Information>
-            {/* <Detail></Detail> */}
+             <Detail></Detail>
             <Application></Application>
         </div>
     )
