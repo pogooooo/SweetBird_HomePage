@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/SweetBird_HomePage/static/css/main.50344f83.css",
+    "main.js": "/SweetBird_HomePage/static/js/main.d3b0e6c3.js",
+    "index.html": "/SweetBird_HomePage/index.html",
+    "main.50344f83.css.map": "/SweetBird_HomePage/static/css/main.50344f83.css.map",
+    "main.d3b0e6c3.js.map": "/SweetBird_HomePage/static/js/main.d3b0e6c3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.50344f83.css",
+    "static/js/main.d3b0e6c3.js"
+  ]
+}
